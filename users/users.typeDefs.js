@@ -3,14 +3,17 @@ import { gql } from "apollo-server-core";
 export default gql`
   type User {
     id: Int!
+    firstName: String!
+    lastName: String
     username: String!
     email: String!
-    name: String!
-    location: String!
-    password: String!
-    avatarURL: String
-    githubUsername: String
     createdAt: String!
     updatedAt: String!
+    bio: String
+    avatar: String
+    followings: [User]
+    followers: [User]
+    totalFollowing: Int!
+    totalFollowers: Int!
   }
 `;

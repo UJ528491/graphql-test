@@ -7,12 +7,13 @@ export default gql`
   }
   type Mutation {
     editProfile(
+      firstName: String
+      lastName: String
+      username: String
       email: String
-      name: String
-      location: String
       password: String
-      avatarURL: String
-      githubUsername: String
+      bio: String
+      avatar: Upload
     ): EditProfileResult!
   }
 `;
